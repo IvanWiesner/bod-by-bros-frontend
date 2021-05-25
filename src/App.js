@@ -1,25 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import MyWorkout from './components/MyWorkout.js';
+import WorkoutContainer from './components/WorkoutContainer.js'
+import React, { Component } from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+  state = {
+    cards: [],
+    MyWorkout: []
 }
-
-export default App;
+addToWorkout = (card) => {
+  const foundCard = this.state.MyWorkout.find(
+    element => element.id === card.id
+  )
+  console.log(foundCard)
+}
+componentDidMount() {
+    fetch('http://localhost:3000/cards/')
+    .then(res => res.json())
+    .then(cards => this.setState({ cards }))
+}
+  render() {
+    
+    return (
+      <div className="App">
+      <MyWorkout />
+      <WorkoutContainer 
+      cards={this.state.cards}
+      addCard={this.addToWorkout}/>
+    </div>
+    )
+  }
+}
