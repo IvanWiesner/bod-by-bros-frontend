@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+img {
+  max-height: 250px;
+  max-width: 300px;
+  padding: 5px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
+  background-color: black;
+  color: #dc635b;
+  border-radius: 40%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+background-image: url("./images/bro.png");  
+margin-left: 50%;
+  margin-right: 10%;
 }
+label {
+  color: #dc635b;
+  background-color: black;
+  border-radius: 20%;
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+input {
+  background-color: #dc635b;
+  font: black;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  color: black;
+  background-color: #dc635b;
+  max-width: 100px;
+}
+p {
+  color: black;
+  background-color: #dc635b;
 }

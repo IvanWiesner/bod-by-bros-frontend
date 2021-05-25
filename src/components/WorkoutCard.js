@@ -39,8 +39,8 @@ export default function WorkoutCard({ card, addCard }) {
                     className="lift">
                     Log weight
                     </button>    
-            </form>
             <button onClick={() => addCard(card)} className="workout-button">Add to workout</button>
+            </form>
         </div>
     )
 }
